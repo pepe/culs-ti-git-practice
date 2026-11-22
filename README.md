@@ -29,3 +29,7 @@ Expect the remote `origin` pointing at your fork, and the branch `main`.
 3. Stage it with `git add CHECKPOINT.md` and read `git diff --cached -- CHECKPOINT.md`.
 4. Commit it with a message that names the change, then `git push origin main`.
 5. Open the commit on GitHub and show your partner the exact lines it contains.
+
+## Next lab: Janet and a DFA
+
+Follow [Janet basics: a two-state DFA](labs/janet-dfa/README.md), then use the same Git loop to share your tested implementation.
