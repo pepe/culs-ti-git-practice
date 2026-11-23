@@ -1,6 +1,6 @@
 # Janet basics: a two-state DFA
 
-EIEC4E / INFOAN1 · Theoretical Informatics
+EIEC4E / INFOAN1 · Theoretical Informatics · Seminar after Lecture 7
 
 Build a recogniser for binary strings with an even number of `1`s. This lab follows the lecture examples in order. Start in the Janet REPL, then apply the same ideas in [parity.janet](parity.janet).
 
@@ -56,6 +56,6 @@ The starter is deliberately incomplete. When your implementation is ready, predi
 | `"101"` | `true` |
 | `"1011"` | `false` |
 
-Then temporarily add `(accepts? "10x")` at the bottom and run again. Expect an invalid-input error. Remove the temporary line before committing. Explain why the empty word accepts, and why reaching `:even` partway through an input is insufficient.
+Then temporarily add `(accepts? "10x")` just above the final `print` line and run again. Expect an invalid-input error. Remove the temporary line before committing. Explain why the empty word accepts, and why reaching `:even` partway through an input is insufficient.
 
-Use the same Git loop: edit, inspect, stage, review, commit and push. On GitHub, open your commit and show the table and runner.
+Use the same Git loop: edit, inspect, stage, review, commit and push. On GitHub, open your commit and show your partner the completed transition table and the two functions.
