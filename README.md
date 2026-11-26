@@ -33,3 +33,7 @@ Expect the remote `origin` pointing at your fork, and the branch `main`.
 ## Next lab: Janet and a DFA
 
 Follow [Janet basics: a two-state DFA](labs/janet-dfa/README.md), then use the same Git loop to share your tested implementation.
+
+## Assignment: automata and PEG in Janet
+
+The graded assignment goes from recognition (DFA) through construction (NFA → DFA) to parsing (PEG). Start with the [overview](assignments/automata-peg/README.md).
