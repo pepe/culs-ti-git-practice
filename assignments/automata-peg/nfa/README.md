@@ -57,3 +57,24 @@ janet nfa/test.janet
 The test compares `nfa-accepts?` and your `dfa/accepts?` on the converted DFA with the language, for every word up to length 8. It also checks the state count and that the result is complete.
 
 Then answer the questions in [ANSWERS.md](ANSWERS.md).
+
+## Bonus: ε-transitions
+
+Extend your NFA representation with ε-transitions, which change state without reading a symbol. The same two functions must handle them:
+
+- The **ε-closure** of a set S is S together with every state reachable from S by ε-transitions alone. Several ε steps can follow each other.
+- `nfa-accepts?` starts in the ε-closure of {q₀}, and after every symbol takes the ε-closure again.
+- `nfa->dfa` uses closed subsets: the start subset is the ε-closure of {q₀}, and each step is "move on `x`, then close".
+
+How you write ε in your representation is up to you. Define two ε-NFAs over {`a`, `b`}, both using ε-transitions:
+
+| Name | Language |
+| --- | --- |
+| `a-star-b-star` | a\*b\*: some `a`s, then some `b`s, either part possibly empty |
+| `a-plus-or-b-plus` | a⁺ \| b⁺: one or more `a`s, or one or more `b`s |
+
+```sh
+janet nfa/test-epsilon.janet
+```
+
+This test does not count states, because the count depends on how you draw the NFA. It does check that `third-from-end-a` still converts to 8 states. Answer question 5 in [ANSWERS.md](ANSWERS.md).
