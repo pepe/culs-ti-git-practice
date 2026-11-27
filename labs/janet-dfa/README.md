@@ -1,4 +1,25 @@
+# Git basics: Syncing your fork to the original repo
+Before we start, be sure to update your branch, to sync with the original one, using these commands
+```
+git remote add upstream https://github.com/pepe/culs-ti-git-practice.git
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+```
+
+All of this is a bit of a pain to type every class, so I suggest setting up an alias, so that you don't have to use so many commands. A good example of an alias like this, could be
+
+```
+git config --global alias.sync "!git checkout main && git fetch upstream && git merge upstream/main && git push origin main"
+```
+
+With this example, from now on, all you need to update your repo is the custom command git sync
+
 # Janet basics: a two-state DFA
+[Be sure to check the official Janet documentation](https://janet-lang.org/docs/index.html)
+
+![Dammit Janet](https://github.com/pepe/culs-ti-git-practice/blob/main/labs/janet-dfa/assets/dammit-janet.gif)
 
 EIEC4E / INFOAN1 · Theoretical Informatics · Seminar after Lecture 7
 
